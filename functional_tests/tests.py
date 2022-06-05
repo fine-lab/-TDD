@@ -1,4 +1,3 @@
-from msilib.schema import tables
 import time
 from selenium import webdriver  # (1)
 from selenium.webdriver.common.keys import Keys
