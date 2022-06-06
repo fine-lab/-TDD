@@ -1,0 +1,11 @@
+[Unit]
+Description=Gunicorn server for 47.111.5.43
+
+[Service]
+Restart=on-failure
+User=zzz
+WorkingDirectory=/home/zzz/sites/47.111.5.43/source
+ExecStart=/home/zzz/sites/47.111.5.43/virtualenv/bin/gunicorn \ --bind unix:/tmp/47.111.5.43.socket suplerlists.wsgi:application
+
+[Install]
+WantedBy=multi-user.target
